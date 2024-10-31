@@ -39,6 +39,18 @@ Al correr el proyecto en la consola saldra un mensaje diciendo `Avaliable on:` s
 
 Para apagar servidor que corre el proyecto solo debes hacer `ctrl + C` en la terminal de vs code. Al apagar el servidor ya no se podran ver los cambios del proyecto en el navegador.
 
+## Entrar a una rama
+
+Para ingresar a una rama especifica y ver las pruebas usa el comando:
+```bash
+git checkout 'nombre de la rama'
+```
+Por ejemplo:
+```bash
+git checkout ignacio
+```
+al ejecutar el comando deberia mostrar al final de la ruta en la terminal `(nombre de la Rama)` para indicar en que rama te encuentras actualmente
+
 ## Notas Adicionales
 
 - Asegúrate de que Node.js y npm estén instalados en tu sistema. Puedes verificar esto ejecutando:
