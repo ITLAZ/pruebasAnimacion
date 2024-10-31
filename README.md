@@ -27,7 +27,7 @@ Para ejecutar el proyecto, sigue estos pasos:
    ```bash
    npm start
    ```
-   Este comando iniciará `http-server` y abrirá automáticamente tu proyecto en el navegador predeterminado.
+   Este comando iniciará `http-server` y `browserSync` y abrirá automáticamente tu proyecto en el navegador predeterminado.
 
 2. **Verifica la animación**. Si todo está configurado correctamente, deberías ver la animación funcionando en tu navegador.
 
@@ -37,7 +37,7 @@ Al correr el proyecto en la consola saldra un mensaje diciendo `Avaliable on:` s
 
 ## Apagar el Servidor
 
-Para apagar servidor que corre el proyecto solo debes hacer `ctrl + C` en la terminal de vs code. Al apagar el servidor ya no se podran ver los cambios del proyecto en el navegador.
+Para apagar servidor que corre el proyecto solo debes hacer `ctrl + C` en la terminal de vs code dos veces. Al apagar el servidor ya no se podran ver los cambios del proyecto en el navegador.
 
 ## Entrar a una rama
 
@@ -58,4 +58,3 @@ al ejecutar el comando deberia mostrar al final de la ruta en la terminal `(nomb
    node -v
    npm -v
    ```
-- Si necesitas instalar `http-server` localmente, este ya debe estar definido en `devDependencies` en el `package.json`, por lo que no es necesario hacerlo manualmente.
