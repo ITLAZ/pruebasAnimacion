@@ -1,0 +1,22 @@
+{
+  "name": "pruebasanimacion",
+  "version": "1.0.0",
+  "description": "Pasos para instalar las librerías GSAP.js, P5.js y animate.css usando Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "gsap": "^3.12.5",
+    "p5": "^1.11.0",
+    "pruebasanimacion": "file:"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
