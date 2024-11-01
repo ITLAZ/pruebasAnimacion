@@ -14,10 +14,12 @@
     "animate.css": "^4.1.1",
     "express": "^4.21.1",
     "gsap": "^3.12.5",
+    "node-dev": "^8.0.0",
     "p5": "^1.11.0",
     "pruebasanimacion": "file:"
   },
   "devDependencies": {
-    "browser-sync": "^3.0.3"
+    "browser-sync": "^3.0.3",
+    "nodemon": "^3.1.7"
   }
 }
