@@ -4,19 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Pruebas</title>
+    <!-- GSAP y sus plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollSmoother.min.js"></script>
+    <!-- <script src="../scripts/gsap.js"></script> -->
     <link rel="stylesheet" href="../styles/gsap.css">
-    <script src="../scripts/gsap.js" defer></script>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="./animate.html">Pruebas Animate.css</a></li>
-            <li><a href="../">Pruebas Librerias Combinadas</a></li>
+            <li><a href="../">Pruebas Librerías Combinadas</a></li>
             <li><a href="./p5.html">Pruebas P5.js</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Pruebas de Animaciones - GSAP.js</h1>
+        <h1 id="titulo">Pruebas de Animaciones - GSAP.js</h1>
     </main>
+    <div id="wrapper">
+        <div id="content">
+          <div class="spacer"></div>
+          <div class="accordions">
+            <div class="accordion">
+              <div class="title">All-screen design.</div>
+              <div class="text">Lets you immerse yourself in whatever you’re reading, watching, or creating...</div>
+            </div>
+            <div class="accordion">
+              <div class="title">Beauty all around.</div>
+              <div class="text">The breakthrough M1 chip is now in Air...</div>
+            </div>
+            <div class="accordion">
+              <div class="title">Take Center Stage.</div>
+              <div class="text">The 12MP Ultra Wide front camera enables Center Stage...</div>
+            </div>
+            <div class="accordion">
+              <div class="title">Pretty everywhere.</div>
+              <div class="text">Join superfast 5G wireless networks...</div>
+            </div>
+          </div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <script>
+        // Registrando los plugins de GSAP
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        // Inicializando ScrollSmoother
+        const scrollerSmoother = ScrollSmoother.create({
+            content: '#content',
+            wrapper: '#wrapper',
+            smooth: 1,
+            normalizeScroll: true,
+            effects: true
+        });
+
+        // Animación para los elementos accordion
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.accordions',
+                pin: true,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            }
+        });
+
+        tl.to('.accordion .text', {
+            height: 0,
+            paddingBottom: 0,
+            opacity: 0,
+            stagger: 0.5
+        }).to('.accordion', {
+            marginBottom: -15,
+            stagger: 0.5
+        }, '<');
+    </script>
 </body>
 </html>
