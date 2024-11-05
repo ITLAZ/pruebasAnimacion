@@ -6,7 +6,6 @@ import { ScrollTrigger } from "/node_modules/gsap/ScrollTrigger.js";
 import Flip from "/node_modules/gsap/Flip.js";
 
 // Registra los plugins de GSAP
-gsap.registerPlugin(ScrollTrigger, Flip);
 
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger, Flip);
@@ -34,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
               immediateRender: false
             }
           })
-          .to(ball, { x: "40vw", ease: "none" })
+          .to(ball, { x: "35vw", ease: "none" })
           .to(ball, { y: 0, ease: "none" })
-          .to(ball, { x: 0, ease: "none" });
+          .to(ball, { x: "-35vw", ease: "none" });
         return () => {
           // when the context reverts, return the ball to the original parentSection and clear the inline styles
           parentSection.appendChild(ball);

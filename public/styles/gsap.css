@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5%;
 }
 
 .section.middle {
@@ -38,8 +39,8 @@ body {
 }
 
 .ball {
-    width: 150px;
-    height: 150px;
+    width: 10%;
+    height: 20%;
     border-radius: 9999px;
     background: #abc;
 }
