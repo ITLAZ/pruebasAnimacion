@@ -11,3 +11,21 @@ body {
 h1, h2 {
     margin: 20px;
 }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#contenedor-principal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Opcional: Fondo para la transición */
+    background-color: #f0f0f0;
+}
