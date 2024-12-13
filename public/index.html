@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Pruebas</title>
     <link rel="stylesheet" href="styles/index.css">
-    <script src="scripts/index.js" defer></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/DrawSVGPlugin.min.js"></script>
+    <script src="scripts/index.js" defer></script> -->
 </head>
 <body>
-    <nav>
-        <ul>
+    <button id="abrir" class="abrir-menu">abrir</button>
+    <nav class="nav" id="nav">
+        <button id="cerrar">cerrar</button>
+        <ul class="nav-list">
             <li><a href="templates/animate.html">Pruebas Animate.css</a></li>
             <li><a href="templates/gsap.html">Pruebas GSAP.js</a></li>
             <li><a href="templates/p5.html">Pruebas P5.js</a></li>
@@ -19,6 +23,46 @@
         <h1>Pruebas de Animaciones</h1>
         <p>El index llevará pruebas de las tres librerias combinadas.</p>
     </main>
-    <div class="transition-overlay"></div>
+    <div class="line-container">
+        <svg viewBox="0 0 255 6396" fill="none" preserveAspectRatio="xMidYMax meet">
+            <path d="M24.8206 5C26.218 40.5568 33.3605 93.193 63.4828 145.364C115.964 236.041 185.835 234.178 221.237 311.968C264.868 407.77 208.194 519.098 205.244 524.688C156.489 617.384 82.2705 611.639 39.7266 707.906C33.2052 722.657 7.43048 782.591 20.7836 851.53C48.1111 992.36 205.71 999.81 233.503 1137.07C250.583 1221.38 207.573 1298.71 203.381 1306.16C167.979 1367.8 125.746 1373.7 81.3387 1437.05C25.9075 1516.24 23.1126 1573.69 24.8206 1603.66C25.2864 1612.82 26.3734 1620.27 27.1498 1625.24M230.859 1623.48C229.461 1587.93 222.319 1535.29 192.196 1483.12C139.715 1392.44 69.8438 1394.31 34.4423 1316.52C-9.1885 1220.71 47.485 1109.39 50.4351 1103.8C99.1898 1011.1 173.409 1016.84 215.953 920.578C222.474 905.827 248.249 845.893 234.896 776.953C207.568 636.123 49.9694 628.671 22.1761 491.412C5.09646 407.101 48.1062 329.776 52.2985 322.323C87.7 260.681 129.933 254.781 174.34 191.431C229.772 112.243 232.567 54.7937 230.859 24.8266C230.393 15.6657 229.306 8.21277 228.529 3.24414M24.8206 1597C26.218 1632.55 33.3605 1685.19 63.4828 1737.36C115.964 1828.04 185.835 1826.17 221.237 1903.96C264.868 1999.77 208.194 2111.09 205.244 2116.68C156.489 2209.38 82.2705 2203.63 39.7266 2299.9C33.2052 2314.65 7.43048 2374.59 20.7836 2443.53C48.1111 2584.36 205.71 2591.81 233.503 2729.07C250.583 2813.38 207.573 2890.7 203.381 2898.16C167.979 2959.8 125.746 2965.7 81.3387 3029.05C25.9075 3108.24 23.1126 3165.69 24.8206 3195.65C25.2864 3204.81 26.3734 3212.27 27.1498 3217.24M230.859 3217.24C229.461 3181.68 222.319 3129.05 192.196 3076.88C139.715 2986.2 69.8438 2988.06 34.4423 2910.27C-9.18847 2814.47 47.485 2703.14 50.4351 2697.55C99.1898 2604.86 173.409 2610.6 215.953 2514.33C222.474 2499.58 248.249 2439.65 234.896 2370.71C207.568 2229.88 49.9694 2222.43 22.1761 2085.17C5.09649 2000.86 48.1062 1923.53 52.2985 1916.08C87.7 1854.44 129.933 1848.54 174.34 1785.19C229.772 1706 232.567 1648.55 230.859 1618.58C230.393 1609.42 229.306 1601.97 228.529 1597M23.8206 3181C25.218 3216.56 32.3605 3269.19 62.4828 3321.36C114.964 3412.04 184.835 3410.18 220.237 3487.97C263.868 3583.77 207.194 3695.1 204.244 3700.69C155.489 3793.38 81.2705 3787.64 38.7266 3883.91C32.2052 3898.66 6.43048 3958.59 19.7836 4027.53C47.1111 4168.36 204.71 4175.81 232.503 4313.07C249.583 4397.38 206.573 4474.71 202.381 4482.16C166.979 4543.8 124.746 4549.7 80.3387 4613.05C24.9075 4692.24 22.1126 4749.69 23.8206 4779.66C24.2864 4788.82 25.3734 4796.27 26.1498 4801.24M229.859 4799.48C228.461 4763.93 221.319 4711.29 191.196 4659.12C138.715 4568.44 68.8438 4570.31 33.4423 4492.52C-10.1885 4396.71 46.485 4285.39 49.4351 4279.8C98.1898 4187.1 172.409 4192.84 214.953 4096.58C221.474 4081.83 247.249 4021.89 233.896 3952.95C206.568 3812.12 48.9694 3804.67 21.1761 3667.41C4.09646 3583.1 47.1062 3505.78 51.2985 3498.32C86.7 3436.68 128.933 3430.78 173.34 3367.43C228.772 3288.24 231.567 3230.79 229.859 3200.83C229.393 3191.67 228.306 3184.21 227.529 3179.24M23.8206 4773C25.218 4808.55 32.3605 4861.19 62.4828 4913.36C114.964 5004.04 184.835 5002.17 220.237 5079.96C263.868 5175.77 207.194 5287.09 204.244 5292.68C155.489 5385.38 81.2705 5379.63 38.7266 5475.9C32.2052 5490.65 6.43048 5550.59 19.7836 5619.53C47.1111 5760.36 204.71 5767.81 232.503 5905.07C249.583 5989.38 206.573 6066.7 202.381 6074.16C166.979 6135.8 124.746 6141.7 80.3387 6205.05C24.9075 6284.24 22.1126 6341.69 23.8206 6371.65C24.2864 6380.81 25.3734 6388.27 26.1498 6393.24M229.859 6393.24C228.461 6357.68 221.319 6305.05 191.196 6252.88C138.715 6162.2 68.8438 6164.06 33.4423 6086.27C-10.1885 5990.47 46.485 5879.14 49.4351 5873.55C98.1898 5780.86 172.409 5786.6 214.953 5690.33C221.474 5675.58 247.249 5615.65 233.896 5546.71C206.568 5405.88 48.9694 5398.43 21.1761 5261.17C4.09649 5176.86 47.1062 5099.53 51.2985 5092.08C86.7 5030.44 128.933 5024.54 173.34 4961.19C228.772 4882 231.567 4824.55 229.859 4794.58C229.393 4785.42 228.306 4777.97 227.529 4773" stroke="#1D1D1B" stroke-width="31.0539" stroke-miterlimit="10"/>
+        </svg>                   
+    </div>
+    <section class="one">
+        <h1 class="scroll" data-rate=".4" data-direction="vertical">ocean stuff</h1>
+    </section>
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="vertical">omg scroll</h1>
+        <p>big watermark</p>
+    </section>
+    <!-- <div class="transition-overlay"></div> -->
+    <script>
+        /* let path = document.querySelector('path');
+        let pathLength = path.getTotalLength();
+        let slowdownFactor = 8;  // Ajusta este valor para desacelerar más o menos la animación
+
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        path.style.strokeDashoffset = pathLength;
+
+        window.addEventListener('scroll', () => {
+            var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            
+            // Desacelera la animación dividiendo el drawLength por slowdownFactor
+            var drawLength = (pathLength * scrollPercentage) / slowdownFactor;
+
+            path.style.strokeDashoffset = pathLength - drawLength;
+        }); */
+        const nav = document.querySelector("#nav");
+        const abrir = document.querySelector("#abrir");
+        const cerrar = document.querySelector("#cerrar");
+
+        abrir.addEventListener("click", () => {
+            nav.classList.add("visible");
+        })
+
+        cerrar.addEventListener("click", () => {
+            nav.classList.remove("visible")
+        })
+    </script>
 </body>
 </html>
