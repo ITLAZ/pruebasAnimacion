@@ -1,42 +1,42 @@
-@import url('../../node_modules/animate.css/animate.min.css');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('/node_modules/animate.css/animate.min.css');
+*{
+    margin: auto;
+    justify-content: center;
+    background-color: black;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
+.square {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(94, 42, 153);
+    text-align: center;
+    line-height: 100px;
+    margin: 20px auto; 
+    font-size: 1.2em;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background-color: #262626;
-    border-radius: 5px;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-}
-
-.card:nth-child(1) {
-    background-color: #1bc;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    padding: 100px;
+    background-color: #eed8f6;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+    max-width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
     font-weight: bold;
-    font-size: 1.5rem;
 }
 
-.card:nth-child(1):hover {
-    animation: jello 1s ease;
-}
+
